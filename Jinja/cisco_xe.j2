@@ -319,6 +319,13 @@ ip ssh source-interface GigabitEthernet1/0/1
 ip tacacs source-interface GigabitEthernet1/0/1
 
 !
+! AAA Accounting
+!
+aaa accounting commands 0 accounting start-stop group TACACS-SRV
+aaa accounting commands 1 accounting start-stop group TACACS-SRV
+aaa accounting commands 15 accounting start-stop group TACACS-SRV
+aaa accounting system default start-stop group TACACS-SRV
+!
 ! Logging
 !
 logging origin-id hostname
