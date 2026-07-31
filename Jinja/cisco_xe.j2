@@ -107,26 +107,6 @@ aaa accounting system default start-stop group {{ aaa_accounting.tacacs_group }}
 {% endif %}
 
 !
-! Logging
-!
-
-{% if logging_servers is defined %}
-{% for server in logging_servers %}
-logging host {{ server }}
-{% endfor %}
-{% endif %}
-
-!
-! NTP
-!
-
-{% if ntp_servers is defined %}
-{% for server in ntp_servers %}
-ntp server {{ server }}
-{% endfor %}
-{% endif %}
-
-!
 ! SNMP
 !
 
