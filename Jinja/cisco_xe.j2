@@ -8,12 +8,6 @@
  
 hostname {{ obj.name }}
  
-{% if config_context.gc.ip_routing %}
-
-ip routing
-
-{% endif %}
- 
 {% if config_context.gc.ssh_timeout is defined %}
 
 ip ssh time-out {{ config_context.gc.ssh_timeout }}
@@ -51,3 +45,4 @@ ntp server {{ server }}
 {% endif %}
  
 end
+ 
