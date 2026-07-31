@@ -33,6 +33,12 @@ ip name-server {{ dns }}
 {% endfor %}
 
 {% endif %}
- 
+
+{% if config_context.gc.snmp.location is defined %}
+
+snmp-server location {{ config_context.gc.snmp.location }}
+
+{% endif %}
+
 end
  
