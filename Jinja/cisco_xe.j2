@@ -34,15 +34,5 @@ ip name-server {{ dns }}
 
 {% endif %}
  
-{% if config_context.gc.ntp.servers is defined %}
-
-{% for server in config_context.gc.ntp.servers %}
-
-ntp server {{ server }}
-
-{% endfor %}
-
-{% endif %}
- 
 end
  
